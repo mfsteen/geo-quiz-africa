@@ -15,14 +15,18 @@ const CountrySilhouette: React.FC<CountrySilhouetteProps> = ({ country }) => {
           xmlns="http://www.w3.org/2000/svg"
           className="w-full h-full"
         >
+          <rect x="0" y="0" width="100" height="100" fill="#f1f5f9" rx="4" />
           <path 
             d={country.svgPath} 
             fill="#3b82f6" 
             stroke="#1e40af" 
-            strokeWidth="1"
+            strokeWidth="0.5"
             className="shadow-lg transition-all duration-300"
           />
         </svg>
+        <div className="text-center mt-2 text-sm text-gray-500">
+          {/* You could add a hint or note here if needed */}
+        </div>
       </div>
     </div>
   );
